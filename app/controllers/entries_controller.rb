@@ -1,5 +1,7 @@
 class EntriesController < ActionController::Base
-
+  # post to / entries
+  # goal string
+  # submitted by string
   def create
     @entry = Entry.new(entry_params)
     if @entry.save

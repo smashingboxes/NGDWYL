@@ -6,16 +6,16 @@
     | You must live in the present of today...
   .step1
     h3 What would you do?
-    form(method="POST", action="/post")
-      input(type="text", placeholder="TYPE", autofocus="true")
-      button.active(type="submit") Next
+    form
+      input(type="text", placeholder="TYPE", autofocus="true", ng-model='goal')
+      button.active(ng-click="doIt()") Next
   .step2
     h3.alt 
       sup *
       | Enter Your Name or Twitter @Name
-    form(method="POST", action="/post")
-      input(type="text", placeholder="Name or @", autofocus="true")
+    form
+      input(type="text", placeholder="Name or @", autofocus="true", ng-model="user")
       p.optional
         sub *
         | optional
-      button.active(type="submit") Next
+      button.active(ng-click="doIt()") Next
