@@ -41,6 +41,9 @@ gem 'jbuilder', '~> 1.2'
 # The twitter gem for use with the NGDWYL bot
 gem 'twitter'
 
+# For sending reminder tweets after some time has passed
+gem 'delayed_job_active_record'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
