@@ -1,4 +1,4 @@
-require_relative "../test_helper"
+require 'test_helper'
 
 class EntryTest < ActiveSupport::TestCase
   # Gotta find a way to stub this out
