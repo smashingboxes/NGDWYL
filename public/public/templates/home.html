@@ -10,8 +10,8 @@
   <div class="pink about">SB Labs?</div>
 
   <div class="about-panel">
-
-    <div class="cursor-plus"></div>
+    <div class="about-panel-background"><div class="cursor-plus"></div></div>
+    
 
     <div class="sb-logo">
       <img src="../public/images/SB_logo.svg" alt="Smashing Boxes Logo"/>
@@ -22,7 +22,7 @@
       <p>Now go do what you love</p>
     </div>
     <div class="about-content">
-      Now Go Do What You Love is the product of <a href="http://smashingboxes.com/ideas/up-innovation-at-work" target="_blank">Smashing Labs</a>, a monthly event at <a href="http://smashinglabs.com" target="_blank">Smashing Boxes</a> dedicated to letting developers and designers showcase their talent and creativity on a non work-related project. Smashing Labs allows creative juices to flow and passions to turn into something new and usable in the tech space. 
+      Now Go Do What You Love is the product of <a href="http://smashingboxes.com/ideas/up-innovation-at-work" target="_blank">Smashing Labs</a>, a monthly event at <a href="http://smashingboxes.com" target="_blank">Smashing Boxes</a> dedicated to letting developers and designers showcase their talent and creativity on a non work-related project. Smashing Labs allows creative juices to flow and passions to turn into something new and usable in the tech space. 
     </div>
   </div>
 
@@ -74,7 +74,7 @@
 
   });
 
-  ap.click(function(){
+  $(".about-panel-background").click(function(){
     hideOverlay();
   });
 
@@ -84,5 +84,13 @@
       left: event.pageX-10
     })
   });
+
+  $(".about-content").mouseover(function(){
+    cb.css("display","none");
+  })
+
+  $(".about-content").mouseleave(function(){
+    cb.css("display","block");
+  })
 
 </script>
