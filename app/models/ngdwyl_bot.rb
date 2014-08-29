@@ -12,4 +12,8 @@ class NGDWYLBot
   def tweet(string)
     @client.update(string)
   end
+
+  def tweets_for(user)
+    @client.user_timeline(user)
+  end
 end

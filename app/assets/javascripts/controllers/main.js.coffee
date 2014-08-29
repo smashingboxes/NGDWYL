@@ -6,8 +6,12 @@
       templateUrl: '../public/templates/home.html',
       controller: 'HomeCtrl'
     }).
-    when('/about', {
-      templateUrl: '../public/templates/about.html',
+    when('/doit', {
+      templateUrl: '../public/templates/doit.html',
+      controller: 'HomeCtrl'
+    }).
+    when('/done', {
+      templateUrl: '../public/templates/done.html',
       controller: 'HomeCtrl'
     }).
     otherwise({

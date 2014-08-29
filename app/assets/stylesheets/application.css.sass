@@ -1,4 +1,5 @@
-@import 'fonts'
+@import fonts
+@import animations
 
 body
   background: #242424
@@ -6,6 +7,36 @@ body
   text-align: center
   font-family: "futura-pt"
   -webkit-font-smoothing: antialiased
+
+  ::-webkit-input-placeholder
+    color: #353738
+  :-moz-placeholder
+    color: #353738
+  ::-moz-placeholder
+    color: #353738
+  :-ms-input-placeholder
+    color: #353738
+
+p
+  color: #fff
+
+button
+  outline: none
+
+a
+  color: #e11863
+  text-decoration: none
+
+h3
+  color: #ea1767
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: .2em
+  &.alt
+    color: #aeaeae
+
+sup
+  color: #e11863
 
 .wrapper
   padding-top: 90px
@@ -35,6 +66,142 @@ h1
 
 .quote
   color: #505050
+  line-height: 1.8em
+  font-weight: 500
+  width: 470px
+  margin: 0 auto
 
 .description
   color: #fff
+  font-weight: 500
+  width: 500px
+  margin: 50px auto
+
+.pink
+  color: #ea1767
+
+.about
+  cursor: pointer
+
+
+
+.about-panel
+  position: absolute
+  top: 0 
+  left: -100%
+  width: 100%
+  height: 100%
+  background: rgba(0,0,0,.8)
+  color: #515151
+  font-size: 16px
+  line-height: 30px
+  opacity: 0
+  cursor: none
+
+.cursor-plus 
+  position: absolute
+  background: transparent url(../public/images/close.png) no-repeat 0 0
+  width: 20px
+  height: 20px
+  z-index: 2
+  left: -100%
+
+
+.about-content
+  width: 100%
+  max-width: 540px
+  margin: auto
+  padding: 10px
+  font-weight: 500
+
+.about-content a
+  color: #ec1467
+  text-decoration: none
+
+.sb-logo 
+  transition-duration: .5s
+  -webkit-transition-duration: .5s
+  margin: 60px auto 100px
+  width: 74px
+  height: 111px
+
+.show .sb-logo
+  margin-top: 100px
+
+.ngdwyl
+  width: 200px
+  margin: 0 auto 74px
+
+.ngdwyl p
+  margin: 0
+  padding: 0
+
+.ngdwyl img
+  width: 36px
+  height: 60px
+
+
+
+.optional
+  margin: 0
+  color: #e11863
+  margin-bottom: 10px
+
+input
+  font-size: 130px
+  background: none
+  border: none
+  letter-spacing: .2em
+  font-weight: 800
+  color: #aeaeae
+  width: 575px
+  display: inline-block
+  text-align: center
+  margin-bottom: 70px
+  text-transform: uppercase
+  &:focus
+    outline: none
+
+button
+  background: none
+  
+  border-radius: 20px
+  font-size: 1em
+  text-transform: uppercase
+  padding: 15px 86px
+  -webkit-font-smoothing: antialiased
+  letter-spacing: .2em
+  cursor: pointer
+  font-weight: 700
+  transition: all .2s linear
+  &.deactivated
+    border: 2px solid #2e2f30
+    color: #2e2f30
+  &.active
+    border: 2px solid #fff
+    color: #fff
+    &:hover
+      color: #242424
+      background: #fff
+
+.image-wrapper
+  border: 35px solid #aeaeae
+  height: 560px
+  width: 645px
+  margin: 0 auto
+  box-sizing: border-box
+  padding: 40px 100px 10px 100px
+  margin-top: 60px
+  text-align: center
+  h1
+    font-size: 6em
+    margin: 17px 0 10px 0
+    font-weight: 700
+    color: #fff
+    text-transform: uppercase
+    line-height: 110px
+
+.meta
+  color: #fff
+  span:not(:last-child)
+    margin-right: 25px
