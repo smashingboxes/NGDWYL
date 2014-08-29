@@ -10,6 +10,13 @@ class EntriesController < ActionController::Base
     redirect_to root_url
   end
 
+  def show
+    @entry = Entry.find(params[:id])
+    respond_to do |format|
+      format.json { render json: @entry }
+    end
+  end
+
   private
 
   def entry_params
