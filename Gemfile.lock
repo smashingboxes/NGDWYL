@@ -59,6 +59,8 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    font-awesome-sass (4.2.0)
+      sass (~> 3.2)
     hike (1.2.3)
     http (0.6.2)
       http_parser.rb (~> 0.6.0)
@@ -169,6 +171,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   delayed_job_active_record
   factory_girl_rails
+  font-awesome-sass (~> 4.2.0)
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.4)
