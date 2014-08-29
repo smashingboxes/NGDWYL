@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 <div class="starter-outer">
   <div class="starter-inner">
     <h1 id="counter"><span>$</span><span class="number">86,400</span></h1>
@@ -12,8 +11,8 @@
   <div class="pink about">SB Labs?</div>
 
   <div class="about-panel">
-
-    <div class="cursor-plus"></div>
+    <div class="about-panel-background"><div class="cursor-plus"></div></div>
+    
 
     <div class="sb-logo">
       <img src="../public/images/SB_logo.svg" alt="Smashing Boxes Logo"/>
@@ -24,7 +23,7 @@
       <p>Now go do what you love</p>
     </div>
     <div class="about-content">
-      Now Go Do What You Love is the product of <a href="http://smashingboxes.com/ideas/up-innovation-at-work" target="_blank">Smashing Labs</a>, a monthly event at <a href="http://smashinglabs.com" target="_blank">Smashing Boxes</a> dedicated to letting developers and designers showcase their talent and creativity on a non work-related project. Smashing Labs allows creative juices to flow and passions to turn into something new and usable in the tech space. 
+      Now Go Do What You Love is the product of <a href="http://smashingboxes.com/ideas/up-innovation-at-work" target="_blank">Smashing Labs</a>, a monthly event at <a href="http://smashingboxes.com" target="_blank">Smashing Boxes</a> dedicated to letting developers and designers showcase their talent and creativity on a non work-related project. Smashing Labs allows creative juices to flow and passions to turn into something new and usable in the tech space. 
     </div>
   </div>
 
@@ -76,7 +75,7 @@
 
   });
 
-  ap.click(function(){
+  $(".about-panel-background").click(function(){
     hideOverlay();
   });
 
@@ -87,20 +86,13 @@
     })
   });
 
+  $(".about-content").mouseover(function(){
+    cb.css("display","none");
+  })
+
+  $(".about-content").mouseleave(function(){
+    cb.css("display","block");
+  })
+
 </script>
-=======
-<div class="main"><i class="icon-logo"></i>
-  <div class="starter-outer">
-    <div class="starter-inner">
-      <h1 id="counter"><span>$</span><span class="number">86,400</span></h1>
-      <p class="quote">If you say that getting the money is the most important thing, you'll spend your life completely wasting your time. You'll be doing things you don't like doing in order to go on living, that is to go on doing thing you don't like doing, which is stupid.<br/>— Alan Watts</p>
-    </div>
-  </div>
-  <script type="text/javascript">
-    $('#counter .number').counterUp({
-      delay: 50,
-      time: 1000
-    })
-  </script>
-</div>
->>>>>>> fb27d55f75121f7faf34eda935bfbddf0b43717a
+
