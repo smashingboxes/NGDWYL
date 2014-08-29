@@ -70,6 +70,8 @@ GEM
       railties (= 4.0.4)
       sprockets-rails (~> 2.0.0)
     rails-assets-angular (1.2.23)
+    rails-assets-angular-route (1.2.23)
+      rails-assets-angular (= 1.2.23)
     railties (4.0.4)
       actionpack (= 4.0.4)
       activesupport (= 4.0.4)
@@ -129,6 +131,7 @@ DEPENDENCIES
   jquery-rails
   rails (= 4.0.4)
   rails-assets-angular
+  rails-assets-angular-route
   sass-rails (~> 4.0.2)
   sdoc
   slim-rails

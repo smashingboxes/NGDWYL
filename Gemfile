@@ -11,6 +11,7 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.2'
 gem "slim-rails"
 gem 'rails-assets-angular'
+gem 'rails-assets-angular-route'
 
 group :development do
   gem "better_errors"
