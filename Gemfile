@@ -12,6 +12,9 @@ gem 'sass-rails', '~> 4.0.2'
 gem "slim-rails"
 gem 'rails-assets-angular'
 
+# Use thin instead of Webrick because Webrick is bad
+gem 'thin'
+
 group :development do
   gem "better_errors"
 end
@@ -33,6 +36,9 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+# The twitter gem for use with the NGDWYL bot
+gem 'twitter'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
