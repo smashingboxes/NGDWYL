@@ -2,6 +2,7 @@ class EntriesController < ActionController::Base
   # post to / entries
   # goal string
   # submitted by string
+  #
   def create
     @entry = Entry.new(entry_params)
     if @entry.save
@@ -16,6 +17,13 @@ class EntriesController < ActionController::Base
     @entry = Entry.find(params[:id])
     respond_to do |format|
       format.json { render json: @entry }
+    end
+  end
+
+  def index
+    @entries = Entry.all
+    respond_to do |format|
+      format.json { render json: @entries }
     end
   end
 

@@ -4,18 +4,18 @@
   $routeProvider.
     when('/', {
       templateUrl: '../public/templates/home.html',
-      controller: 'HomeCtrl'
+      controller: 'home'
     }).
     when('/doit', {
       templateUrl: '../public/templates/doit.html',
-      controller: 'HomeCtrl'
+      controller: 'home'
     }).
     when('/done', {
       templateUrl: '../public/templates/done.html',
-      controller: 'HomeCtrl'
+      controller: 'entries'
     }).
     otherwise({
       templateUrl: '../public/templates/home.html',
-      controller: 'HomeCtrl'
+      controller: 'home'
     })
 ])

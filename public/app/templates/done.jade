@@ -2,11 +2,15 @@
   p Every morning credits you with 86,400 seconds.
   .image-wrapper
     a(href="#") NowGoDoWhatYouLove.com
-    h1 Travel The World
+    h1 {{goal}}
     .meta
       span $86,400 / day
-      span @raleighfelton
+      span {{user}}
   .share
     p share
     i.fa.fa-facebook
     i.fa.fa-twitter
+.footer-entries
+  .entries(ng-repeat="entry in entries | orderBy: 'id':true | limitTo: 4") 
+    p {{entry.id}}
+    h4.title {{entry.goal}}
