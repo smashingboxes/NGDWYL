@@ -1,6 +1,6 @@
 class Entry < ActiveRecord::Base
-  after_create :send_tweet
-  after_create :send_reminder_tweet
+  after_create :send_tweet, if: Proc.new { Rails.env.production? }
+  after_create :send_reminder_tweet, if: Proc.new { Rails.env.production? }
   
   validates :goal, presence: true
 
