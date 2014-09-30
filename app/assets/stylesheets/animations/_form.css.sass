@@ -1,0 +1,79 @@
+#page-form
+
+  .description
+    position: relative
+
+    -webkit-animation-name: fadeIn, scale
+    -webkit-animation-duration: 5s, 2s
+    -webkit-animation-fill-mode: both, both
+    -webkit-timing-function: ease, both
+    -webkit-animation-delay: .2s
+
+  .step1__title
+    -webkit-animation-name: fadeIn
+    -webkit-animation-duration: 4s
+    -webkit-animation-fill-mode: both
+    -webkit-timing-function: ease
+    -webkit-animation-delay: 6s
+
+  .step2__title
+    -webkit-animation-name: fadeIn
+    -webkit-animation-duration: 2s
+    -webkit-animation-fill-mode: both
+    -webkit-timing-function: ease
+
+  .step1
+    .step__form
+      position: relative
+
+      -webkit-animation-name: slideUp, fadeIn
+      -webkit-animation-duration: 1.5s
+      -webkit-animation-fill-mode: both
+      -webkit-timing-function: ease
+      -webkit-animation-delay: 9s
+
+  .step2
+    .step__form
+      position: relative
+
+      -webkit-animation-name: slideUp, fadeIn
+      -webkit-animation-duration: 1.5s
+      -webkit-animation-fill-mode: both
+      -webkit-timing-function: ease
+      -webkit-animation-delay: 1s
+
+@-webkit-keyframes slideDown
+  from
+    top: 0px
+  to
+    top: 100px
+
+@-webkit-keyframes slideUp
+  from
+    top: 100px
+  to
+    top: 0px
+
+@-webkit-keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@-webkit-keyframes pageEnter
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@-webkit-keyframes pageLeave
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+@-webkit-keyframes scale
+  0%
+    transform: scale(.95)
+  100%
+    transform: scale(1)

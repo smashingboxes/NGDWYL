@@ -1,6 +1,10 @@
 NGDWYL::Application.routes.draw do
-  root :to => "static_pages#index"
 
   resources :entries
+
+  get "/*path", to: redirect("/")
+  
+  root :to => "static_pages#index"
+
 
 end

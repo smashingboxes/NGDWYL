@@ -6,18 +6,22 @@
     You must live in the present of today...
   </p>
   <div ng-hide="showUser" class="step1">
-    <h3>What would you do?</h3>
-    <form ng-submit="processForm()">
-      <input type="text" placeholder="TYPE" autofocus="true" ng-model="goal"/>
-      <button class="active">Next</button>
-    </form>
+    <h3 class="step1__title">What would you do?</h3>
+    <div class="step__form">
+      <form ng-submit="processForm()">
+        <input type="text" placeholder="TYPE" autofocus="true" ng-model="goal" ng-keydown="onKeydown()" ng-class="inputClass"/>
+        <button class="button active">Next</button>
+      </form>
+    </div>
   </div>
   <div ng-show="showUser" class="step2">
-    <h3 class="alt"> <sup>*</sup>Enter Your Name or Twitter @Name</h3>
-    <form ng-submit="processForm()">
-      <input type="text" placeholder="Name or @" autofocus="true" ng-model="user"/>
-      <p class="optional"><sub>*</sub>optional</p>
-      <button type="submit" class="active">Next</button>
-    </form>
+    <h3 class="step2__title"><sup>*</sup>Enter Your Name or Twitter @Name</h3>
+    <div class="step__form">
+      <form ng-submit="processForm()">
+        <input type="text" placeholder="@" autofocus="true" ng-model="user" ng-keydown="onKeydowns()" ng-class="inputClass2"/>
+        <p class="optional"><sub>*</sub>optional</p>
+        <button type="submit" class="button active">Next</button>
+      </form>
+    </div>
   </div>
 </div>

@@ -1,21 +1,23 @@
-@app = angular.module('HomeCtrl', ['ngRoute'])
+@app = angular.module('ngdwyl', ['ngRoute', 'ngAnimate'])
 
-@app.config(['$routeProvider', ($routeProvider) ->
+@app.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) ->
+
   $routeProvider.
-    when('/', {
+    when('/',
       templateUrl: '../public/templates/home.html',
-      controller: 'home'
-    }).
-    when('/doit', {
+      controller: 'homeCtrl'
+    ).
+    when('/doit',
       templateUrl: '../public/templates/doit.html',
-      controller: 'home'
-    }).
-    when('/done', {
-      templateUrl: '../public/templates/done.html',
-      controller: 'entries'
-    }).
-    otherwise({
+      controller: 'formCtrl'
+    ).
+    when('/entries/:id',
+      templateUrl: '../public/templates/show.html',
+      controller: 'listCtrl'
+    ).
+    otherwise(
       templateUrl: '../public/templates/home.html',
-      controller: 'home'
-    })
+      controller: 'homeCtrl'
+    )
+
 ])

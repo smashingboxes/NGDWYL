@@ -1,10 +1,15 @@
 @import fonts
-@import animations
+@import animations/index
+@import animations/home
+@import animations/form
+
 
 body
+  overflow: hidden
   background: #242424
   font-weight: 16px
   text-align: center
+  padding-top: 60px
   font-family: "futura-pt"
   -webkit-font-smoothing: antialiased
 
@@ -16,6 +21,11 @@ body
     color: #353738
   :-ms-input-placeholder
     color: #353738
+
+.body-full
+  position: relative
+
+
 
 p
   color: #fff
@@ -32,14 +42,12 @@ h3
   font-weight: 700
   text-transform: uppercase
   letter-spacing: .2em
-  &.alt
+  &.step2__title
     color: #aeaeae
 
 sup
   color: #e11863
 
-.wrapper
-  padding-top: 60px
 
 .main
   width: 575px
@@ -51,10 +59,13 @@ sup
   width: 575px
   margin: 0 auto
 
+.starter-outer
+  position: relative
+
 h1
   color: #aeaeae
 
-  &#counter
+  &.counter
     color: #ea1767
     font-size: 9.188em
     font-family: "futura-pt"
@@ -70,6 +81,10 @@ h1
   font-weight: 500
   width: 470px
   margin: 0 auto
+  margin-bottom: 60px
+  + button
+    &.hidden
+      display: none
 
 .description
   color: #fff
@@ -158,24 +173,33 @@ h1
   color: #e11863
   margin-bottom: 10px
 
-input
-  font-size: 130px
+textarea, input
   background: none
   border: none
   letter-spacing: .2em
   font-weight: 800
   color: #aeaeae
   width: 575px
+  height: 155px
   display: inline-block
   text-align: center
   margin-bottom: 70px
   text-transform: uppercase
+
+  &.standard
+    font-size: 130px
+  &.small
+    font-size: 70px
+  &.xsmall
+    font-size: 35px
+  &.xxsmall
+    font-size: 16px
   &:focus
     outline: none
 
-button
+
+.button
   background: none
-  
   border-radius: 20px
   font-size: 1em
   text-transform: uppercase
@@ -184,7 +208,7 @@ button
   letter-spacing: .2em
   cursor: pointer
   font-weight: 700
-  transition: all .2s linear
+  transition: background .2s linear
   &.deactivated
     border: 2px solid #2e2f30
     color: #2e2f30
@@ -201,9 +225,10 @@ button
   width: 645px
   margin: 0 auto
   box-sizing: border-box
-  padding: 40px 100px 10px 100px
+  padding: 40px 60px 10px 60px
   margin-top: 60px
   text-align: center
+  position: relative
   h1
     font-size: 6em
     margin: 17px 0 10px 0
@@ -217,15 +242,15 @@ button
 
 
 .meta
+  position: absolute
+  bottom: 40px
+  left: 230px
   color: #fff
   span:not(:last-child)
     margin-right: 25px
 
-.footer-entries
-  text-align: left
-
 .entries
-  display: inline-block
+  float: left
   border: 13px solid #aeaeae
   width: 256px
   height: 244px
@@ -236,4 +261,44 @@ button
     margin-right: 45px
   .title
     font-size: 32.85px
+    word-wrap: break-word
+
+.home
+  .icon-logo    
+    position: relative
+    &:after
+      display: block
+      content: "\e600"
+      height: 80px
+      width: 51px
+      position: absolute
+      clip: rect(0px, 80px, 80px, 0px)
+      color: #ea1767
+      top: 0
+      left: 0
+      z-index: 1
+      -webkit-animation: loading both 3.05s ease-in
+
+@-webkit-keyframes loading
+  0%
+    clip: rect(0px, 80px, 80px, 0px)
+  100%
+    clip: rect(80px, 80px, 80px, 0px)
     
+.share
+  margin-top: 35px
+  text-transform: uppercase
+  p
+    color: #4f5151
+
+.footer-entries
+  width: 1263px
+  margin: 0 auto
+  margin-top: 70px
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+

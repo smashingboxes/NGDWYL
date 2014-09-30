@@ -1,5 +1,5 @@
 doctype html
-html(ng-app="HomeCtrl")
+html(ng-app="ngdwyl")
   head
     title NGDWYL
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
@@ -7,6 +7,5 @@ html(ng-app="HomeCtrl")
     script src="//use.typekit.net/utk8odw.js" type="text/javascript" 
     javascript:
       try{Typekit.load();}catch(e){}
-  body
-    .wrapper(ng-view)
 
+  body.page ng-view="true" class="{{bodyClass}}" id="{{pageID}}"

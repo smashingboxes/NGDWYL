@@ -12,6 +12,8 @@ gem 'sass-rails', '~> 4.0.2'
 gem "slim-rails"
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
+gem 'rails-assets-angular-animate'
+gem 'rails-assets-angular-truncate-asset'
 gem 'font-awesome-sass', '~> 4.2.0'
 
 # Use thin instead of Webrick because Webrick is bad

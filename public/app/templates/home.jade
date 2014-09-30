@@ -1,19 +1,19 @@
-.main
+.main.home
   i.icon-logo
   .starter-outer
     .starter-inner
-      h1#counter
+      h1.counter
         span $
         span.number 86,400
       p.quote
         | If you say that getting the money is the most important thing, you'll spend your life completely wasting your time. You'll be doing things you don't like doing in order to go on living, that is to go on doing thing you don't like doing, which is stupid.
         br
         | — Alan Watts
-
+      a.button.active(href="/#/doit") Next
 
   script(type="text/javascript").
-    $('#counter .number').counterUp({
+    $('.counter .number').counterUp({
       delay: 50,
-      time: 1000
+      time: 3000
     })
 

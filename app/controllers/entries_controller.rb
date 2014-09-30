@@ -1,23 +1,25 @@
 class EntriesController < ActionController::Base
-  # post to / entries
-  # goal string
-  # submitted by string
-  #
+
   def create
     @entry = Entry.new(entry_params)
+
     if @entry.save
       flash[:success] = "Goal submitted!"
     else
       flash[:error] = @entry.errors.full_messages
     end
-    redirect_to root_url
+    respond_to do |format|
+      format.html { render json: @entry }
+    end
   end
 
   def show
     @entry = Entry.find(params[:id])
+
     respond_to do |format|
       format.json { render json: @entry }
     end
+
   end
 
   def index
