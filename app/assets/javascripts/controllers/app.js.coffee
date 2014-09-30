@@ -6,15 +6,14 @@
   $scope.pageID = "page-form"
 
   $scope.inputClass = 'standard'
-  $scope.inputClass2 = 'standard'
 
-
-  # Needs refactoring
-  $scope.onKeydown = ->
+  $scope.onKeyDown = (subject) ->
     $timeout (->
+      if subject is "goal"
+        len = $scope.goal?.length
+      else len = $scope.user?.length if subject is "user"
 
-      len = $scope.goal?.length
-      switch 
+      switch
         when len <= 5
           $scope.inputClass = 'standard'
         when len >= 5 and len <= 10
@@ -25,25 +24,9 @@
           $scope.inputClass = 'xxsmall'
     ), 10
 
-  $scope.onKeydowns = ->
-    $timeout (->
-
-      len = $scope.user?.length
-      switch
-        when len <= 5
-          $scope.inputClass2 = 'standard'
-        when len >= 5 and len <= 10
-          $scope.inputClass2 = 'small'
-        when len > 10 and len <= 20
-          $scope.inputClass2 = 'xsmall'
-        when len > 20
-          $scope.inputClass2 = 'xxsmall'
-    ), 10
-
-
-
   $scope.processForm = ->
-    $scope.showUser = $scope.goal
+    $scope.showUser = true
+    $scope.inputClass = 'standard'
 
     if $scope.goal && $scope.user
       $http.post('/entries', { "entry": { "goal": $scope.goal, "submitted_by": $scope.user } }).success (data) ->
