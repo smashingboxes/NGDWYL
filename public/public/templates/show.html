@@ -2,7 +2,7 @@
 <div class="main-final">
   <p>Every morning credits you with 86,400 seconds.</p>
   <div class="image-wrapper"><a href="#">NowGoDoWhatYouLove.com</a>
-    <h1>{{entry.goal | characters: 20}}</h1>
+    <h1>{{entry.goal | characters: 15}}</h1>
     <div class="meta"><span>$86,400 / day</span><span>{{entry.user}}</span></div>
   </div>
   <div class="share">
@@ -12,6 +12,6 @@
 <div class="footer-entries">
   <div ng-repeat="entry in entries | orderBy: 'id':true | limitTo: 4" class="entries"> 
     <p>{{entry.id}}</p>
-    <h4 class="title">{{entry.goal | characters: 30}}</h4>
+    <h4 class="title">{{entry.goal | characters: 35}}</h4>
   </div>
 </div>

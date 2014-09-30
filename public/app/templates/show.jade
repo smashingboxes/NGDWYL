@@ -2,7 +2,7 @@
   p Every morning credits you with 86,400 seconds.
   .image-wrapper
     a(href="#") NowGoDoWhatYouLove.com
-    h1 {{entry.goal | characters: 20}}
+    h1 {{entry.goal | characters: 15}}
     .meta
       span $86,400 / day
       span {{entry.user}}
@@ -13,4 +13,4 @@
 .footer-entries
   .entries(ng-repeat="entry in entries | orderBy: 'id':true | limitTo: 4") 
     p {{entry.id}}
-    h4.title {{entry.goal | characters: 30}}
+    h4.title {{entry.goal | characters: 35}}
