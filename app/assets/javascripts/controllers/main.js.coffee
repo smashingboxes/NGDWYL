@@ -1,4 +1,4 @@
-@app = angular.module('ngdwyl', ['ngRoute', 'ngAnimate'])
+@app = angular.module('ngdwyl', ['ngRoute', 'ngAnimate', 'truncate'])
 
 @app.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) ->
 

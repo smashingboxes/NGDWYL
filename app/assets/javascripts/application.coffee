@@ -5,6 +5,7 @@
 # = require angular
 # = require angular-route
 # = require angular-animate
+# = require angular-truncate-asset
 
 # = require controllers/main
 # = require controllers/app
