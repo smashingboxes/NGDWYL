@@ -51,6 +51,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  # Use Smashing Boxer for deployment
+  gem 'smashing_boxer', git: "https://github.com/smashingboxes/smashing_boxer.git"
+end
+
 group :development, :test do
   gem 'factory_girl_rails'
 end
@@ -60,9 +65,6 @@ end
 
 # Use unicorn as the app server
 gem 'unicorn'
-
-# Use Smashing Boxer for deployment
-gem 'smashing_boxer', git: "https://github.com/smashingboxes/smashing_boxer.git"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
