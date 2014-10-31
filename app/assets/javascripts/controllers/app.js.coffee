@@ -38,10 +38,13 @@
   $scope.bodyClass = "body-full"
   $scope.pageID = "page-list"
 
-  getUrl = '/entries/' + $routeParams.id + '.json'
+  getUrl = '/entries/' + $routeParams.id + '.json?callback=JSON_CALLBACK'
+
+  $http.jsonp(getUrl).then (results) ->
+    console.log results
 
   $http.get(getUrl).success (entry) ->
-    console.log entry
+    # console.log entry
     $scope.entry = entry
 
   $http.get('/entries.json').success (entries) ->
