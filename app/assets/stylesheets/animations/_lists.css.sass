@@ -1,0 +1,41 @@
+#page-list
+
+  .main-final
+    p
+      font-size: 1.5em
+      position: relative
+      -webkit-animation: slideUpMainP
+      -webkit-animation-duration: 1s
+      -webkit-animation-fill-mode: both
+      -webkit-animation-timing-function: ease-out
+      -webkit-animation-delay: 3s
+      span
+        color: #ea1767
+
+
+  .image-wrapper,
+  .share,
+  .footer-entries
+    -webkit-animation: show
+    -webkit-animation-duration: 2s
+    -webkit-animation-fill-mode: both
+    -webkit-animation-timing-function: ease
+    -webkit-animation-delay: 6s
+  a
+    -webkit-animation: show
+    -webkit-animation-duration: 2s
+    -webkit-animation-fill-mode: both
+    -webkit-animation-timing-function: ease
+    -webkit-animation-delay: 4s
+
+@-webkit-keyframes slideUpMainP
+  0%
+    top: 200px
+  100%
+    top: 0px
+
+@-webkit-keyframes show
+  0%
+    opacity: 0
+  100%
+    opacity: 1
