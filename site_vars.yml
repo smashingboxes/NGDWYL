@@ -1,0 +1,7 @@
+app_name: NGDWYL
+app_repo: git@github.com:smashingboxes/NGDWYL.git
+fe_app_repo: false
+fe_app_branch: false
+fe_app: false
+dev_key_files:
+  - dev_keys/ian.pub

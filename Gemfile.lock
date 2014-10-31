@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/smashingboxes/smashing_boxer.git
+  revision: c60221b1710174e0f9fc11ac728cde76153a7754
+  specs:
+    smashing_boxer (0.0.3)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -192,6 +198,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.2)
   sdoc
   slim-rails
+  smashing_boxer!
   thin
   turbolinks
   twitter
