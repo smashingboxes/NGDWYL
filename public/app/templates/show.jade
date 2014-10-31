@@ -1,8 +1,12 @@
 .main-final
-  p Every morning credits you with 86,400 seconds.
+  p 
+    | Every morning credits you with 
+    span $
+    span.number 86,400
+    |  seconds.
+  a(href="#") NowGoDoWhatYouLove.com
   .image-wrapper
-    a(href="#") NowGoDoWhatYouLove.com
-    h1 {{entry.goal | characters: 15}}
+    h1(ng-class="h1Class") {{entry.goal}}
     .meta
       span $86,400 / day
       span {{entry.user}}
@@ -14,3 +18,9 @@
   .entries(ng-repeat="entry in entries | orderBy: 'id':true | limitTo: 4") 
     p {{entry.id}}
     h4.title {{entry.goal | characters: 35}}
+
+script(type="text/javascript").
+  $('.number').counterUp({
+    delay: 50,
+    time: 2000
+  })

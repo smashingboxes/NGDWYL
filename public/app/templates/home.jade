@@ -9,11 +9,85 @@
         | If you say that getting the money is the most important thing, you'll spend your life completely wasting your time. You'll be doing things you don't like doing in order to go on living, that is to go on doing thing you don't like doing, which is stupid.
         br
         | — Alan Watts
-      a.button.active(href="/#/doit") Next
+      a.button.active(href="/#/doit") What is this?
+
+    .pink.about SB Labs?
+
+  .about-panel
+    .about-panel-background
+      .cursor-plus
+    .sb-logo
+      img(src='../public/images/SB_logo.svg', alt='Smashing Boxes Logo')
+    .ngdwyl
+      img(src='../public/images/ngdwyl_logo.svg', alt='Now go do what you love logo')
+      p Now go do what you love
+    .about-content
+      | Now Go Do What You Love is the product of 
+      a(href='http://smashingboxes.com/ideas/up-innovation-at-work', target='_blank') Smashing Labs 
+      | , a monthly event at 
+      a(href='http://smashingboxes.com', target='_blank') Smashing Boxes 
+      | dedicated to letting developers and designers showcase their talent and creativity on a non work-related project. Smashing Labs allows creative juices to flow and passions to turn into something new and usable in the tech space.
 
   script(type="text/javascript").
+    var ap = $(".about-panel");
+    var cb = $(".cursor-plus");
+
+    function showOverlay(){
+      ap.css({
+        left: 0,
+        opacity: 0
+      });
+
+      ap.addClass("show");
+
+      ap.animate({
+        opacity:1
+      },300)
+    }
+
+    function hideOverlay(){
+      ap.removeClass("show");
+
+      ap.animate({
+        opacity: 0
+        },300,function(){
+        ap.css({
+          left:"-100%"
+        })
+      });
+    }
+
     $('.counter .number').counterUp({
       delay: 50,
-      time: 3000
+      time: 2000
+    });
+
+    $(".about").click(function(){
+      var sbl = $(".sb-logo")
+
+      if(ap.hasClass("show")){
+        hideOverlay();
+      }else{
+        showOverlay();
+      }
+
+    });
+
+    $(".about-panel-background").click(function(){
+      hideOverlay();
+    });
+
+    ap.mousemove(function(event){
+      cb.css({
+        top: event.pageY-10,
+        left: event.pageX-10
+      })
+    });
+
+    $(".about-content").mouseover(function(){
+      cb.css("display","none");
     })
 
+    $(".about-content").mouseleave(function(){
+      cb.css("display","block");
+    })

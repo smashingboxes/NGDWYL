@@ -1,0 +1,718 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("icomoon.eot?5zl5tx");
+  src: url("icomoon.eot?#iefix5zl5tx") format("embedded-opentype"), url("icomoon.woff?5zl5tx") format("woff"), url("icomoon.ttf?5zl5tx") format("truetype"), url("icomoon.svg?5zl5tx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 12, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/_fonts.css.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 26, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/_fonts.css.scss */
+.icon-logo:before {
+  content: "\e600";
+}
+
+/* line 1, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_index.css.sass */
+.page {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+/* line 8, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_index.css.sass */
+.page.ng-enter {
+  z-index: 888;
+}
+
+/* line 11, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_index.css.sass */
+.page.ng-leave {
+  z-index: 999;
+}
+
+/* line 14, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_index.css.sass */
+#page-list {
+  overflow: auto;
+}
+
+/* line 2, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+#page-home .counter {
+  position: relative;
+  -webkit-animation: slideUp, scale;
+  -webkit-animation-duration: 1s, 3s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 4s, 0;
+}
+/* line 11, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+#page-home .quote {
+  position: relative;
+  -webkit-animation-name: slideUp, fadeIn;
+  -webkit-animation-duration: 1s, 2s;
+  -webkit-animation-fill-mode: both, both;
+  -webkit-timing-function: ease, ease;
+  -webkit-animation-delay: 4.2s;
+}
+/* line 20, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+#page-home a {
+  position: relative;
+  -webkit-animation-name: slideUp, fadeIn;
+  -webkit-animation-duration: 2s, 2s;
+  -webkit-animation-fill-mode: both, both;
+  -webkit-timing-function: ease, ease-in;
+  -webkit-animation-delay: 4.5s;
+}
+
+@-webkit-keyframes slideDown {
+  /* line 30, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  from {
+    top: 0px;
+  }
+
+  /* line 32, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  to {
+    top: 100px;
+  }
+}
+
+@-webkit-keyframes slideUp {
+  /* line 36, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  from {
+    top: 100px;
+  }
+
+  /* line 38, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  to {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 42, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  from {
+    opacity: 0;
+  }
+
+  /* line 44, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pageEnter {
+  /* line 48, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  from {
+    opacity: 0;
+  }
+
+  /* line 50, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pageLeave {
+  /* line 54, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  from {
+    opacity: 1;
+  }
+
+  /* line 56, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scale {
+  /* line 60, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  0% {
+    transform: scale(0.5);
+  }
+
+  /* line 62, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_home.css.sass */
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* line 3, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+#page-form .description {
+  position: relative;
+  -webkit-animation-name: fadeIn, scale;
+  -webkit-animation-duration: 5s, 2s;
+  -webkit-animation-fill-mode: both, both;
+  -webkit-timing-function: ease, both;
+  -webkit-animation-delay: 0.2s;
+}
+/* line 12, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+#page-form .step1__title {
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  -webkit-timing-function: ease;
+  -webkit-animation-delay: 6s;
+}
+/* line 19, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+#page-form .step2__title {
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  -webkit-timing-function: ease;
+}
+/* line 26, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+#page-form .step1 .step__form {
+  position: relative;
+  -webkit-animation-name: slideUp, fadeIn;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  -webkit-timing-function: ease;
+  -webkit-animation-delay: 9s;
+}
+/* line 36, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+#page-form .step2 .step__form {
+  position: relative;
+  -webkit-animation-name: slideUp, fadeIn;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  -webkit-timing-function: ease;
+  -webkit-animation-delay: 1s;
+}
+
+@-webkit-keyframes slideDown {
+  /* line 46, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  from {
+    top: 0px;
+  }
+
+  /* line 48, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  to {
+    top: 100px;
+  }
+}
+
+@-webkit-keyframes slideUp {
+  /* line 52, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  from {
+    top: 100px;
+  }
+
+  /* line 54, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  to {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 58, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  from {
+    opacity: 0;
+  }
+
+  /* line 60, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pageEnter {
+  /* line 64, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  from {
+    opacity: 0;
+  }
+
+  /* line 66, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pageLeave {
+  /* line 70, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  from {
+    opacity: 1;
+  }
+
+  /* line 72, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scale {
+  /* line 76, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  0% {
+    transform: scale(0.95);
+  }
+
+  /* line 78, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_form.css.sass */
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* line 3, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_lists.css.sass */
+#page-list .main-final p {
+  position: relative;
+  -webkit-animation: slideUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-delay: 1s;
+}
+/* line 10, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_lists.css.sass */
+#page-list .image-wrapper,
+#page-list .share,
+#page-list .footer-entries {
+  -webkit-animation: show;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 3s;
+}
+
+@-webkit-keyframes slideUp {
+  /* line 20, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_lists.css.sass */
+  0% {
+    top: 200px;
+    font-size: 2em;
+  }
+
+  /* line 23, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_lists.css.sass */
+  100% {
+    top: 0px;
+    font-size: 1em;
+  }
+}
+
+@-webkit-keyframes show {
+  /* line 28, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_lists.css.sass */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 30, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/animations/_lists.css.sass */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 8, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+body {
+  overflow: hidden;
+  background: #242424;
+  font-weight: 16px;
+  text-align: center;
+  padding-top: 60px;
+  font-family: "futura-pt";
+  -webkit-font-smoothing: antialiased;
+  -moz-placeholder-color: #353738;
+  -ms-input-placeholder-color: #353738;
+}
+/* line 17, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+body ::-webkit-input-placeholder {
+  color: #353738;
+}
+/* line 21, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+body ::-moz-placeholder {
+  color: #353738;
+}
+
+/* line 26, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.body-full {
+  position: relative;
+}
+
+/* line 29, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+p {
+  color: white;
+}
+
+/* line 32, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+button {
+  outline: none;
+}
+
+/* line 35, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+a {
+  color: #e11863;
+  text-decoration: none;
+}
+
+/* line 39, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+h3 {
+  color: #ea1767;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+/* line 44, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+h3.step2__title {
+  color: #aeaeae;
+}
+
+/* line 47, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+sup {
+  color: #e11863;
+}
+
+/* line 50, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+h4 {
+  margin: 0;
+  margin: 0.4em;
+}
+
+/* line 54, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.main {
+  width: 575px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 60, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.starter-outer {
+  width: 575px;
+  margin: 0 auto;
+}
+
+/* line 64, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.starter-outer {
+  position: relative;
+}
+
+/* line 67, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+h1 {
+  color: #aeaeae;
+}
+/* line 70, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+h1.counter {
+  color: #ea1767;
+  font-size: 9.188em;
+  font-family: "futura-pt";
+  margin: 5px 0 0 0;
+}
+
+/* line 76, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.icon-logo {
+  color: #505050;
+  font-size: 5em;
+}
+
+/* line 80, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.quote {
+  color: #505050;
+  line-height: 1.8em;
+  font-weight: 500;
+  width: 470px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+/* line 88, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.quote + button.hidden {
+  display: none;
+}
+
+/* line 91, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.description {
+  color: white;
+  font-weight: 500;
+  width: 500px;
+  margin: 50px auto;
+}
+
+/* line 97, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.pink {
+  color: #ea1767;
+}
+
+/* line 100, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.about {
+  margin-top: 50px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* line 106, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.about-panel {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #515151;
+  font-size: 16px;
+  line-height: 30px;
+  opacity: 0;
+}
+
+/* line 119, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.about-panel-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: none;
+}
+
+/* line 127, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.cursor-plus {
+  position: absolute;
+  background: transparent url(../public/images/close.png) no-repeat 0 0;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  left: -100%;
+}
+
+/* line 136, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.about-content {
+  width: 100%;
+  max-width: 540px;
+  margin: auto;
+  padding: 10px;
+  font-weight: 500;
+  z-index: 2;
+  position: relative;
+}
+
+/* line 145, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.about-content a {
+  color: #ec1467;
+  text-decoration: none;
+}
+
+/* line 149, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.sb-logo {
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  margin: 60px auto 100px;
+  width: 74px;
+  height: 111px;
+}
+
+/* line 156, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.show .sb-logo {
+  margin-top: 100px;
+}
+
+/* line 159, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.ngdwyl {
+  width: 200px;
+  margin: 0 auto 74px;
+}
+
+/* line 163, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.ngdwyl p {
+  margin: 0;
+  padding: 0;
+  color: #515151;
+}
+
+/* line 169, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.ngdwyl img {
+  width: 36px;
+  height: 60px;
+}
+
+/* line 173, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.optional {
+  margin: 0;
+  color: #e11863;
+  margin-bottom: 10px;
+}
+
+/* line 178, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+textarea, input {
+  background: none;
+  border: none;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: #aeaeae;
+  width: 575px;
+  height: 155px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+/* line 191, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+textarea.standard, input.standard {
+  font-size: 130px;
+}
+/* line 193, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+textarea.small, input.small {
+  font-size: 70px;
+}
+/* line 195, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+textarea.xsmall, input.xsmall {
+  font-size: 35px;
+}
+/* line 197, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+textarea.xxsmall, input.xxsmall {
+  font-size: 16px;
+}
+/* line 199, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+textarea:focus, input:focus {
+  outline: none;
+}
+
+/* line 203, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.button {
+  background: none;
+  border-radius: 20px;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 15px 86px;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s linear;
+}
+/* line 214, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.button.deactivated {
+  border: 2px solid #2e2f30;
+  color: #2e2f30;
+}
+/* line 217, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.button.active {
+  border: 2px solid white;
+  color: white;
+}
+/* line 220, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.button.active:hover {
+  color: #242424;
+  background: white;
+}
+
+/* line 224, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.image-wrapper {
+  border: 35px solid #aeaeae;
+  height: 560px;
+  width: 645px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 40px 60px 10px 60px;
+  margin-top: 60px;
+  text-align: center;
+  position: relative;
+}
+/* line 234, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.image-wrapper h1 {
+  word-wrap: break-word;
+  font-size: 6em;
+  margin: 17px 0 10px 0;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  line-height: 110px;
+}
+
+/* line 243, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.main-final p {
+  margin: 0;
+}
+
+/* line 247, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.meta {
+  position: absolute;
+  bottom: 40px;
+  left: 230px;
+  color: white;
+}
+/* line 252, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.meta span:not(:last-child) {
+  margin-right: 25px;
+}
+
+/* line 255, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.entries {
+  float: left;
+  border: 13px solid #aeaeae;
+  width: 256px;
+  height: 244px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+/* line 263, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.entries:not(:last-child) {
+  margin-right: 45px;
+}
+/* line 265, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.entries .title {
+  font-size: 32.85px;
+  word-wrap: break-word;
+}
+
+/* line 270, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.home .icon-logo {
+  position: relative;
+}
+/* line 272, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.home .icon-logo:after {
+  display: block;
+  content: "\e600";
+  height: 80px;
+  width: 51px;
+  position: absolute;
+  clip: rect(0px, 80px, 80px, 0px);
+  color: #ea1767;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-animation: loading both 2.05s ease-in;
+}
+
+@-webkit-keyframes loading {
+  /* line 286, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+  0% {
+    clip: rect(0px, 80px, 80px, 0px);
+  }
+
+  /* line 288, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+  100% {
+    clip: rect(80px, 80px, 80px, 0px);
+  }
+}
+
+/* line 291, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.share {
+  margin-top: 35px;
+  text-transform: uppercase;
+}
+/* line 294, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.share p {
+  color: #4f5151;
+}
+
+/* line 297, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.footer-entries {
+  width: 1263px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+/* line 301, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.footer-entries:before, .footer-entries:after {
+  content: "";
+  display: table;
+}
+/* line 305, /Users/kennethnicholson/Documents/sb-projects/NGDWYL/NGDWYL/app/assets/stylesheets/application.css.sass */
+.footer-entries:after {
+  clear: both;
+}
