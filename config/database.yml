@@ -15,6 +15,6 @@ test:
 
 production:
   adapter: postgresql
-  database: ngdwyl_production
+  database: ngdwyl_development
   pool: 5
   timeout: 5000

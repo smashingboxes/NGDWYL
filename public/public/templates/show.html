@@ -1,8 +1,11 @@
 
 <div class="main-final">
-  <p>Every morning credits you with 86,400 seconds.</p>
-  <div class="image-wrapper"><a href="#">NowGoDoWhatYouLove.com</a>
-    <h1>{{entry.goal | characters: 15}}</h1>
+  <p>
+     
+    Every morning credits you with <span>$</span><span class="number">86,400</span> seconds.
+  </p><a href="#">NowGoDoWhatYouLove.com</a>
+  <div class="image-wrapper">
+    <h1 ng-class="h1Class">{{entry.goal}}</h1>
     <div class="meta"><span>$86,400 / day</span><span>{{entry.user}}</span></div>
   </div>
   <div class="share">
@@ -15,3 +18,9 @@
     <h4 class="title">{{entry.goal | characters: 35}}</h4>
   </div>
 </div>
+<script type="text/javascript">
+  $('.number').counterUp({
+    delay: 50,
+    time: 2000
+  })
+</script>

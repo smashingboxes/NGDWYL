@@ -24,11 +24,13 @@
           $scope.inputClass = 'xxsmall'
     ), 10
 
-  $scope.processForm = ->
-    $scope.showUser = true
+  $scope.processForm = (config) ->
     $scope.inputClass = 'standard'
 
-    if $scope.goal && $scope.user
+    if $scope.goal
+      $scope.showUser = true
+
+    if $scope.goal && config == 'next'
       $http.post('/entries', { "entry": { "goal": $scope.goal, "submitted_by": $scope.user } }).success (data) ->
         $location.path '/entries/' + data.id
 
@@ -38,14 +40,22 @@
   $scope.bodyClass = "body-full"
   $scope.pageID = "page-list"
 
-  getUrl = '/entries/' + $routeParams.id + '.json?callback=JSON_CALLBACK'
-
-  $http.jsonp(getUrl).then (results) ->
-    console.log results
+  getUrl = '/entries/' + $routeParams.id + '.json'
 
   $http.get(getUrl).success (entry) ->
-    # console.log entry
     $scope.entry = entry
+    len = entry.goal.length
+    console.log len
+
+    switch
+      when len <= 5
+        $scope.h1Class = 'standard'
+      when len >= 5 and len <= 10
+        $scope.h1Class = 'small'
+      when len > 10 and len <= 20
+        $scope.h1Class = 'xsmall'
+      when len > 20
+        $scope.h1Class = 'xxsmall'
 
   $http.get('/entries.json').success (entries) ->
     entries = entries.slice(0, entries.length - 1 )

@@ -17,11 +17,7 @@ class EntriesController < ActionController::Base
     @entry = Entry.find(params[:id])
 
     respond_to do |format|
-      if params[:callback]
-        format.json { render json: @entry, callback: params[:callback] }
-      else
-        format.json { render json: @entry }        
-      end
+      format.json { render json: @entry }
     end
 
   end
@@ -29,11 +25,7 @@ class EntriesController < ActionController::Base
   def index
     @entries = Entry.all
     respond_to do |format|
-      if params[:callback]
-        format.json { render json: @entries, callback: params[:callback] }
-      else
-        format.json { render json: @entries }        
-      end
+      format.json { render json: @entries }
     end
   end
 

@@ -17,7 +17,7 @@
   <div ng-show="showUser" class="step2">
     <h3 class="step2__title"><sup>*</sup>Enter Your Name or Twitter @Name</h3>
     <div class="step__form">
-      <form ng-submit="processForm()">
+      <form ng-submit="processForm('next')">
         <input type="text" placeholder="@" autofocus="true" ng-model="user" ng-keyup="onKeyDown('user')" ng-class="inputClass"/>
         <p class="optional"><sub>*</sub>optional</p>
         <button type="submit" class="button active">Next</button>

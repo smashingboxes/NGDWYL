@@ -19,7 +19,7 @@
       | Enter Your Name or Twitter @Name
 
     .step__form
-      form(ng-submit="processForm()")
+      form(ng-submit="processForm('next')")
         input(type="text", placeholder="@", autofocus="true", ng-model="user", ng-keyup="onKeyDown('user')", ng-class='inputClass')
         p.optional
           sub *
