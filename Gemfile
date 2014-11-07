@@ -52,8 +52,7 @@ group :doc do
 end
 
 group :development do
-  # Use Smashing Boxer for deployment
-  gem 'smashing_boxer', git: "https://github.com/smashingboxes/smashing_boxer.git"
+  gem 'capistrano', '~> 2.15.5'
 end
 
 group :development, :test do
