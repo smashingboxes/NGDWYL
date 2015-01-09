@@ -1,7 +1,42 @@
+# App specific configs & default var overrides
+#
+# Variables above the OVERRIDES must be set for provisioning
+# and deployment to work properly
+
+#
+# App Configs
+#
 app_name: NGDWYL
 app_repo: git@github.com:smashingboxes/NGDWYL.git
-fe_app_repo: false
-fe_app_branch: false
-fe_app: false
+app_env: production
+app_branch: master
+
+#
+# Frontend App Configs
+#
+fe_app: false                                              # Do you want to deploy/provision a fe app?
+fe_app_repo:
+fe_app_branch: master
+
+#
+# SSH Configs
+#
+# ssh PUBLIC keys for users that can access the box as 'deployer'
 dev_key_files:
   - dev_keys/ian.pub
+
+#
+# Database configs
+#
+# database_password: somepassword
+
+#
+# Delayed Job
+#
+# enabled_delayed_job: false
+
+############################################################
+# OVERRIDES
+#
+# place all overrides to vars/defaults.yml here
+############################################################
