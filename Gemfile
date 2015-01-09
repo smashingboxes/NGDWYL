@@ -22,13 +22,12 @@ gem 'thin'
 # Allow private gems in travis
 gh_oauth_token = '110e30514c8fe1ba44e8b73340b8a4a3e7ae4626'
 
-# Use Smashing Boxer for deploys
-gem 'smashing_boxer',
-  git: "https://#{gh_oauth_token}:x-oauth-basic@github.com/smashingboxes/smashing_boxer",
-  branch: "master"
-
 group :development do
   gem "better_errors"
+  # Use Smashing Boxer for deploys
+  gem 'smashing_boxer',
+    git: "https://#{gh_oauth_token}:x-oauth-basic@github.com/smashingboxes/smashing_boxer",
+    branch: "master"
 end
 
 # Use Uglifier as compressor for JavaScript assets
