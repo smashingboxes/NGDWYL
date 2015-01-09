@@ -1,5 +1,9 @@
-[master]
-104.131.123.159 app_env=production app_branch=master
+[production]
+104.131.123.159 app_env=production app_branch=master 
+
+[vagrant]
+192.168.13.37 ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
 
 [omnibox:children]
-master
+vagrant
+production

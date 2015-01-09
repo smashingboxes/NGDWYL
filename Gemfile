@@ -2,22 +2,30 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails'
 
 # Use postgres as the database for Active Record
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.2'
+gem 'sass-rails'
 gem "slim-rails"
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
 gem 'rails-assets-angular-animate'
 gem 'rails-assets-angular-truncate-asset'
-gem 'font-awesome-sass', '~> 4.2.0'
+gem 'font-awesome-sass'
 
 # Use thin instead of Webrick because Webrick is bad
 gem 'thin'
+
+# Allow private gems in travis
+gh_oauth_token = '110e30514c8fe1ba44e8b73340b8a4a3e7ae4626'
+
+# Use Smashing Boxer for deploys
+gem 'smashing_boxer',
+  git: "https://#{gh_oauth_token}:x-oauth-basic@github.com/smashingboxes/smashing_boxer",
+  branch: "master"
 
 group :development do
   gem "better_errors"
@@ -27,7 +35,7 @@ end
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -38,7 +46,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 # The twitter gem for use with the NGDWYL bot
 gem 'twitter'
@@ -49,10 +57,6 @@ gem 'delayed_job_active_record'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
-end
-
-group :development do
-  gem 'capistrano', '~> 2.15.5'
 end
 
 group :development, :test do
