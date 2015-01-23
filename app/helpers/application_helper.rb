@@ -1,3 +1,3 @@
 module ApplicationHelper
-  Slim::Engine.set_default_options :attr_delims => {'(' => ')', '[' => ']'}
+  Slim::Engine.set_options :attr_delims => {'(' => ')', '[' => ']'}
 end
