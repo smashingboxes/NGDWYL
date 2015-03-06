@@ -24,6 +24,7 @@ fe_app_branch: master
 # ssh PUBLIC keys for users that can access the box as 'deployer'
 dev_key_files:
   - dev_keys/ian.pub
+  - dev_keys/kenneth.pub
 
 #
 # Database configs
