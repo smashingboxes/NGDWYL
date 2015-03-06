@@ -9,8 +9,9 @@
     <h3 class="step1__title">What would you do?</h3>
     <div class="step__form">
       <form ng-submit="processForm()">
-        <input type="text" placeholder="TYPE" autofocus="true" ng-model="goal" ng-keyup="onKeyDown('goal')" ng-class="inputClass"/>
-        <button class="button active">Next</button>
+        <input type="text" placeholder="TYPE" autofocus="true" ng-model="goal" ng-keyup="onKeyDown('goal')" ng-readonly="readonly"/>
+        <button class="button active">2/3 Next</button>
+        <div><span ng-class="{'show': readonly, 'hidden': !readonly}" class="error">No more characters</span></div>
       </form>
     </div>
   </div>
@@ -18,9 +19,9 @@
     <h3 class="step2__title"><sup>*</sup>Enter Your Name or Twitter @Name</h3>
     <div class="step__form">
       <form ng-submit="processForm('next')">
-        <input type="text" placeholder="@" autofocus="true" ng-model="user" ng-keyup="onKeyDown('user')" ng-class="inputClass"/>
+        <input type="text" placeholder="@" autofocus="true" ng-model="user" ng-keyup="onKeyDown('user')"/>
         <p class="optional"><sub>*</sub>optional</p>
-        <button type="submit" class="button active">Next</button>
+        <button type="submit" class="button active">3/3 Submit</button>
       </form>
     </div>
   </div>

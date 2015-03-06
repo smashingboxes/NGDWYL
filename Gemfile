@@ -15,6 +15,7 @@ gem 'rails-assets-angular-route'
 gem 'rails-assets-angular-animate'
 gem 'rails-assets-angular-truncate-asset'
 gem 'font-awesome-sass'
+gem "autoprefixer-rails"
 
 # Use thin instead of Webrick because Webrick is bad
 gem 'thin'
