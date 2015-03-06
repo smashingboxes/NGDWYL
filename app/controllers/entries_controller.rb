@@ -2,7 +2,6 @@ class EntriesController < ActionController::Base
 
   def create
     @entry = Entry.new(entry_params)
-
     if @entry.save
       flash[:success] = "Goal submitted!"
     else
@@ -15,17 +14,22 @@ class EntriesController < ActionController::Base
 
   def show
     @entry = Entry.find(params[:id])
-
     respond_to do |format|
       format.json { render json: @entry }
     end
-
   end
 
   def index
     @entries = Entry.all
     respond_to do |format|
       format.json { render json: @entries }
+    end
+  end
+
+  def random
+    @entry = Entry.order("RANDOM()").first
+    respond_to do |format|
+      format.json { render json: @entry }
     end
   end
 

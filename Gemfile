@@ -17,19 +17,10 @@ gem 'rails-assets-angular-truncate-asset'
 gem 'font-awesome-sass'
 gem "autoprefixer-rails"
 
-# Use thin instead of Webrick because Webrick is bad
+# Server
+gem 'unicorn'
 gem 'thin'
-
-# Allow private gems in travis
-gh_oauth_token = '110e30514c8fe1ba44e8b73340b8a4a3e7ae4626'
-
-group :development do
-  gem "better_errors"
-  # Use Smashing Boxer for deploys
-  gem 'smashing_boxer',
-    git: "https://#{gh_oauth_token}:x-oauth-basic@github.com/smashingboxes/smashing_boxer",
-    branch: "master"
-end
+gem 'tape', github: 'smashingboxes/tape', tag: '0.2.2', group: :development
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -61,13 +52,5 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails'
+  gem 'pry-byebug'
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-gem 'unicorn'
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
