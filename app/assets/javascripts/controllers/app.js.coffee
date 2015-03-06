@@ -40,8 +40,10 @@
 
   $http.get(getUrl).success (entry) ->
     $scope.entry = entry
-    len = entry.goal.length
 
+  $scope.reload = ->
+    $http.get('/entries/random.json').success (entry) ->
+      $scope.entry = entry
 
   $http.get('/entries.json').success (entries) ->
     entries = entries.slice(0, entries.length - 1 )

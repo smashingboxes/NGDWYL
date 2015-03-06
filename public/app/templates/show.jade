@@ -9,11 +9,13 @@
     .meta
       span {{entry.submitted_by}}
       span $86,400 / day
-      
-.share
-  p share
-  i.fa.fa-facebook
-  i.fa.fa-twitter
+.reload
+  i.fa.fa-refresh(ng-click="reload()")
+
+//- .share
+//-   p share
+//-   i.fa.fa-facebook
+//-   i.fa.fa-twitter
       
 script(type="text/javascript").
   $('.number').counterUp({
