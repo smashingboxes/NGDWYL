@@ -1,6 +1,8 @@
 NGDWYL::Application.routes.draw do
 
-  resources :entries
+  resources :entries, only: [ :create, :show, :index ] do
+    get 'random' , on: :collection
+  end
 
   get "/*path", to: redirect("/")
   
