@@ -227,6 +227,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   coffee-rails
+  daemons
   delayed_job_active_record
   factory_girl_rails
   font-awesome-sass

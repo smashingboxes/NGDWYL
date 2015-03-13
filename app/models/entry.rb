@@ -21,7 +21,7 @@ class Entry < ActiveRecord::Base
   def send_reminder_tweet
     if submitted_by.present? && submitted_by.first == "@"
       bot = NGDWYLBot.new
-      tweet = "Hey #{ submitted_by }, how's #{ goal } coming along? It's been #{ TWEET_DELAY } seconds."
+      tweet = "Hey #{ submitted_by }, how's \"#{ goal }\" coming along? It's been #{ TWEET_DELAY } seconds."
       bot.delay(run_at: TWEET_DELAY.from_now).tweet(tweet)
     end
   end
