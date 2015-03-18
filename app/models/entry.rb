@@ -4,7 +4,7 @@ class Entry < ActiveRecord::Base
   
   validates :goal, presence: true
 
-  TWEET_DELAY = 1.hour
+  TWEET_DELAY = 7.days
 
   private
 
