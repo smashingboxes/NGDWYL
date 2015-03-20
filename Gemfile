@@ -16,6 +16,7 @@ gem 'rails-assets-angular-animate'
 gem 'rails-assets-angular-truncate-asset'
 gem 'font-awesome-sass'
 gem "autoprefixer-rails"
+gem 'angulartics-rails'
 
 # Server
 gem 'unicorn'

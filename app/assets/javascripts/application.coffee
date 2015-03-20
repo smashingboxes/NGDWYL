@@ -6,6 +6,8 @@
 # = require angular-route
 # = require angular-animate
 # = require angular-truncate-asset
+#= require angulartics
+#= require angulartics-ga 
 
 # = require controllers/main
 # = require controllers/app
