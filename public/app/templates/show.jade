@@ -3,14 +3,14 @@
     | Every morning credits you with 
     span.number 86,400
     |  seconds.
-  a(href="#") NowGoDoWhatYouLove.com
+  a(href="#", analytics-on="click", analytics-event="Click", analytics-category="Link", analytics-label="Entry Home URL") NowGoDoWhatYouLove.com
   .image-wrapper
     h1(ng-class="h1Class") {{entry.goal}}
     .meta
       span {{entry.submitted_by}}
       span $86,400 / day
 .reload
-  i.fa.fa-refresh(ng-click="reload()")
+  i.fa.fa-refresh(ng-click="reload()", analytics-on="click", analytics-event="Click", analytics-category="Icon", analytics-label="Entry Refresh")
 
 //- .share
 //-   p share

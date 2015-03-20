@@ -9,7 +9,7 @@
         | If you say that getting the money is the most important thing, you'll spend your life completely wasting your time. You'll be doing things you don't like doing in order to go on living, that is to go on doing thing you don't like doing, which is stupid.
         br
         | — Alan Watts
-      a.button.active(href="/#/doit") Begin
+      a.button.active(href="/#/doit", analytics-on="click", analytics-event="Click", analytics-category="Button", analytics-label="Home Begin") Begin
 
   .about-panel
     .about-panel-background
@@ -21,13 +21,13 @@
       p Now go do what you love
     .about-content
       | Now Go Do What You Love is the product of 
-      a(href='http://smashingboxes.com/ideas/up-innovation-at-work', target='_blank') Smashing Labs 
+      a(href='http://smashingboxes.com/ideas/up-innovation-at-work', target='_blank', analytics-on="click", analytics-event="Click", analytics-category="Outbound Link", analytics-label="Overlay Smashing Labs Blog") Smashing Labs 
       | , a monthly event at 
-      a(href='http://smashingboxes.com', target='_blank') Smashing Boxes 
+      a(href='http://smashingboxes.com', target='_blank', analytics-on="click", analytics-event="Click", analytics-category="Outbound Link", analytics-label="Overlay Smashing Boxes") Smashing Boxes 
       | dedicated to letting developers and designers showcase their talent and creativity on a non work-related project. 
       | Smashing Labs allows creative juices to flow and passions to turn into something new and usable in the tech space.
       
-.pink.about SB Labs?
+.pink.about(analytics-on="click", analytics-event="Click", analytics-category="Link", analytics-label="Home SB Labs") SB Labs?
 
   script(type="text/javascript").
     var ap = $(".about-panel");

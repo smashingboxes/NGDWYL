@@ -11,7 +11,7 @@
     .step__form
       form(ng-submit="processForm()")
         input(type="text", placeholder="TYPE", autofocus="true", ng-model="goal", ng-keyup="onKeyDown('goal')", ng-readonly="readonly")
-        button.button.active 1/2 Next
+        button.button.active(analytics-on="click", analytics-event="Click", analytics-category="Button", analytics-label="Next 1/2") 1/2 Next
         div
           span.error(ng-class="{'show': readonly, 'hidden': !readonly}") No more characters
 
@@ -27,4 +27,4 @@
         p.optional
           sub *
           | optional
-        button.button(type="submit").active 2/2 Submit
+        button.button(type="submit", analytics-on="click", analytics-event="Click", analytics-category="Button", analytics-label="Submit 1/2").active 2/2 Submit

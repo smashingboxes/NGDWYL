@@ -1,4 +1,4 @@
-@app = angular.module('ngdwyl', ['ngRoute', 'ngAnimate', 'truncate'])
+@app = angular.module('ngdwyl', ['ngRoute', 'ngAnimate', 'truncate', 'angulartics', 'angulartics.google.analytics'])
 
 @app.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) ->
 
@@ -15,9 +15,5 @@
       templateUrl: '../public/templates/show.html',
       controller: 'listCtrl'
     ).
-    otherwise(
-      templateUrl: '../public/templates/home.html',
-      controller: 'homeCtrl'
-    )
-
+    otherwise( {redirectTo: '/'} )
 ])
